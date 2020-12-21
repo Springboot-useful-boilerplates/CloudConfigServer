@@ -1,4 +1,5 @@
-This project contains a springboot app that is used as a basis for any future Springboot Implementation
+This project contains a springboot app that contains a Spring cloud config server that will be left for any future microservice
+ architecture.
 
 All the code of this project is under the terms of the software GPL v3 license
 (https://www.gnu.org/licenses/gpl-3.0-standalone.html).
