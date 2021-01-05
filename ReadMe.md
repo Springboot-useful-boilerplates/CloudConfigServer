@@ -17,12 +17,12 @@ If you need to generate this image, in linux you just must be in the root of the
 After the build process, if you want to run it, just execute the following command taking into account that if you 
 changed the name "springboot-app" in the previous step, you should have to change it here too.
 
-```docker run -p 8080:8080 springboot-app```
+```docker run -p 8888:8888 springboot-app```
 
 After this is working, you can send a Get by using postman or any other method to the app in the address:
 
-```http://localhost:8080/example``` 
+```http://localhost:8888/example``` 
 
 Also, the health endpoint is up and accessible under the address
 
-```http://localhost:8080/actuator/healt``` 
+```http://localhost:8888/actuator/healt``` 

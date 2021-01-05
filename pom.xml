@@ -25,11 +25,20 @@
         <findbugsVersion>3.0.4</findbugsVersion>
         <spotbugsVersion>4.1.4</spotbugsVersion>
         <mavenJarPlugin>3.2.0</mavenJarPlugin>
+        <springCloudConfigServerVersion>2.2.6.RELEASE</springCloudConfigServerVersion>
     </properties>
 
-
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+            <version>${springCloudConfigServerVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>5.3.3.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -41,6 +50,17 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springBootversion}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${springBootversion}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -59,19 +79,6 @@
             <artifactId>gson</artifactId>
             <version>${gsonVersion}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${springBootversion}</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>${springBootversion}</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -181,7 +188,6 @@
                     <failOnError>true</failOnError>
                 </configuration>
                 <executions>
-
                     <execution>
                         <goals>
                             <goal>check</goal>
