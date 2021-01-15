@@ -26,3 +26,8 @@ After this is working, you can send a Get by using postman or any other method t
 Also, the health endpoint is up and accessible under the address
 
 ```http://localhost:8888/actuator/healt``` 
+
+Using the default repository to test, in order to obtain the url, you can send a get to
+
+```http://localhost:8888/configuration-dev.yml```
+

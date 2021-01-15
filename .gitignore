@@ -2,3 +2,4 @@
 target/
 SpringbootBaseProject.iml
 
+/src/main/resources/loginCredentials.yml
